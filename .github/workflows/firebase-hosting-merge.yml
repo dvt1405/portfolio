@@ -2,10 +2,13 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
-'on':
-  push:
-    branches:
-      - main
+on:
+  workflow_dispatch:
+# Manual only since 2026-11-12 (GitHub token incident). Triggers before:
+# 'on':
+#   push:
+#     branches:
+#       - main
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
